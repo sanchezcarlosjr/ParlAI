@@ -147,6 +147,7 @@ app.get('/webhook', async function(req, res) {
 app.post('/webhook', async function(req, res, next) {
   let body = req.body;
   console.log(body);
+  console.log(body.entry[0].messaging);
   // Checks this is an event from a page subscription
   if (body.object === 'page') {
     try {
